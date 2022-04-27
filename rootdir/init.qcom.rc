@@ -36,8 +36,10 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
+    export LD_SHIM_LIBS /system/lib/libmedia.so|libshim_libmedia.so
+
     # Set permissions for persist partition
-    mkdir /persist 0771 system system
+    mkdir /persist 0771 root system
 
     # Add preload partition.
     mkdir /preload 0771 system system

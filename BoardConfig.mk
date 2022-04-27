@@ -34,6 +34,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 TARGET_KERNEL_CONFIG := j2y18lte_defconfig
+#TARGET_KERNEL_CONFIG := j2y18lte2_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j2y18lte
 
 # ANT
@@ -77,6 +78,10 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libmedia.so|libshim_libmedia.so
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8937

@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     tinymix
 
+# libmedia
+PRODUCT_PACKAGES += \
+    libshim_libmedia
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/L16OL_s5k3p3sx_module_info.xml:system/etc/camera/L16OL_s5k3p3sx_module_info.xml \
